@@ -7,26 +7,31 @@ import com.badlogic.gdx.utils.ScreenUtils;
 
 public class ShopGame extends ApplicationAdapter {
 	SpriteBatch batch;
-	Texture img;
+	Player player;
+	MovePoint movePoint;
 	public static boolean debug = false;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		player = new Player();
+		movePoint = new MovePoint();
 	}
 
 	@Override
 	public void render () {
-		ScreenUtils.clear(1, 0, 0, 1);
+		ScreenUtils.clear(0, 0, 0, 1);
 		batch.begin();
-		batch.draw(img, 0, 0);
+		player.update(batch);
+		movePoint.update(batch);
 		batch.end();
+		StaticMethods.miscControls();
 	}
 	
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
+		player.dispose();
+		movePoint.dispose();
 	}
 }
