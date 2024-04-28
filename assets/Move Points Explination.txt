@@ -1,0 +1,5 @@
+x y left right up down
+Starts with two numbers which define the move point's x and y.
+Then it has four booleans which define if the player can move in that direction.
+
+Also, the first move point is where the player will spawn. (if none are found, the player will spawn at 32, 32)

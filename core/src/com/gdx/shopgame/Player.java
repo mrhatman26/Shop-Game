@@ -22,6 +22,11 @@ public class Player {
         spriteBatch.draw(playerSprite, playerRect.x, playerRect.y);
     }
 
+    public void setRect(int x, int y){
+        this.playerRect.x = x;
+        this.playerRect.y = y;
+    }
+
     public void dispose(){
         playerSprite.dispose();
     }

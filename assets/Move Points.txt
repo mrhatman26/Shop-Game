@@ -1,0 +1,2 @@
+128 128 false false true false
+128 160 false false false true
